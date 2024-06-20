@@ -12,7 +12,7 @@ Rental application submission and management
 Admin dashboard for managing properties, users, and rentals
 
 ## To run the application locally: 
-git clone https://github.com/sherlockholmes999/dbms-project.git
+git clone https://github.com/srikanth-93197/Online-Rental-Website.git
 
 cd client 
 npm install 
