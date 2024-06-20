@@ -1,4 +1,4 @@
-# dbms-project
+# Online Rental Website
 ## Renting Properties Online :
 A web application that allows users to rent properties online. The application is built using React, MySQL, Express, and Node.js. 
 It provides a user-friendly interface for searching and browsing available properties, and allows users to submit rental applications 
