@@ -1,4 +1,4 @@
-# dbms-project
+# Online Rental Website
 ## Renting Properties Online :
 A web application that allows users to rent properties online. The application is built using React, MySQL, Express, and Node.js. 
 It provides a user-friendly interface for searching and browsing available properties, and allows users to submit rental applications 
@@ -12,7 +12,7 @@ Rental application submission and management
 Admin dashboard for managing properties, users, and rentals
 
 ## To run the application locally: 
-git clone https://github.com/sherlockholmes999/dbms-project.git
+git clone https://github.com/srikanth-93197/Online-Rental-Website.git
 
 cd client 
 npm install 
