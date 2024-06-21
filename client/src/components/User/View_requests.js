@@ -7,17 +7,17 @@ const ViewRq = () => {
     const aid = localStorage.getItem("aadhar");
     const [proplist, setProplist] = useState([]) 
     useEffect(() => {
-        Axios.get(`http://localhost:3001/viewpendingreq/${aid}`).then(
+        Axios.get(`https://online-rental-website.onrender.com/viewpendingreq/${aid}`).then(
             response => setProplist(response.data)
         )
     })
 
     const reject = (rid, pid) => {
-        Axios.get(`http://localhost:3001/revokerequest/${pid}&${rid}`)
+        Axios.get(`https://online-rental-website.onrender.com/revokerequest/${pid}&${rid}`)
     }
 
     const approve = (rid, pid, stdt, endt, ac, pih) => {
-       Axios.post("http://localhost:3001/approverequest", {
+       Axios.post("https://online-rental-website.onrender.com/approverequest", {
         Pid: pid, 
         Stdt: stdt , 
         Endt: endt, 

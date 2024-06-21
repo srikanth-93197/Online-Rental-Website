@@ -14,7 +14,7 @@ const ViewReqform= () => {
         const Aid = localStorage.getItem("aadhar")
 
         const request = () => {
-            Axios.post("http://localhost:3001/addreq", {
+            Axios.post("https://online-rental-website.onrender.com/addreq", {
                 Ac: ac, 
                 Pic: pic, 
                 Stdt: stdt, 

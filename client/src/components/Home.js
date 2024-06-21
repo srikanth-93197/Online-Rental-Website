@@ -32,7 +32,7 @@ const Home = () => {
     var aid = localStorage.getItem('aadhar')
 
     useEffect(() => {
-        Axios.get(`http://localhost:3001/gethome/${aid}`).then(response => setHouses(response.data))
+        Axios.get(`https://online-rental-website.onrender.com/gethome/${aid}`).then(response => setHouses(response.data))
     }) 
 
    

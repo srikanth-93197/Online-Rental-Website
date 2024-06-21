@@ -31,7 +31,7 @@ const Register = () => {
         else if(pno2 == null) alert("invalid personal phone number")
         else if (age <= 0) alert("invalid age")
         else {
-        Axios.post('http://localhost:3001/register',{
+        Axios.post('https://online-rental-website.onrender.com/register',{
             Name: name,  
             Pass: pass, 
             Adid: adid, 

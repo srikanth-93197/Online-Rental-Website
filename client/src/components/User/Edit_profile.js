@@ -12,7 +12,7 @@ const Editprof = () => {
     const Aid = localStorage.getItem('aadhar')
 
     useEffect(() => {
-        Axios.get(`http://localhost:3001/getuserdetails/${Aid}`).then(response => setUserDetails(response.data) ).then(() => {
+        Axios.get(`https://online-rental-website.onrender.com/getuserdetails/${Aid}`).then(response => setUserDetails(response.data) ).then(() => {
             setName(userDetails[0].NAME);
             setPass(userDetails[0].PASSWORD); 
             setAge(userDetails[0].AGE); 
@@ -22,7 +22,7 @@ const Editprof = () => {
             setState(userDetails[0].STATE); 
             setStno(userDetails[0].STREET); 
         }).then(() => {
-            Axios.get(`http://localhost:3001/getphone/${Aid}`).then(response => setPhone(response.data)).then(() => {
+            Axios.get(`https://online-rental-website.onrender.com/getphone/${Aid}`).then(response => setPhone(response.data)).then(() => {
                 setOpno(phone[0].phone_number)
                 setPpno(phone[1].phone_number)
                 
@@ -39,7 +39,7 @@ const Editprof = () => {
         else if (city == "") window.alert("city cannot be empty")
         else if(state == "") window.alert("state cannot be empty")
         else {
-            Axios.post("http://localhost:3001/updateuserdetails", {
+            Axios.post("https://online-rental-website.onrender.com/updateuserdetails", {
             Name: name, 
             Pass: pass, 
             Adid: Aid, 
@@ -49,12 +49,12 @@ const Editprof = () => {
             Stno: stno, 
             City: city,
             State: state
-            }).then( Axios.post("http://localhost:3001/updatephone1", {
+            }).then( Axios.post("https://online-rental-website.onrender.com/updatephone1", {
                 Opno: Opno, 
                 Aid: Aid
             })
             
-            ).then( Axios.post("http://localhost:3001/updatephone2", {
+            ).then( Axios.post("https://online-rental-website.onrender.com/updatephone2", {
                 Ppno: Ppno,
                 Aid: Aid
             })

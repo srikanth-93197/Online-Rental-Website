@@ -19,13 +19,13 @@ const ViewRP = () => {
      }
 
     const revokeP = (id) => {
-       Axios.get(`http://localhost:3001/revokerequest/${id}&${aid}`)
+       Axios.get(`https://online-rental-website.onrender.com/revokerequest/${id}&${aid}`)
     }
 
     const set = () => {
-        Axios.get(`http://localhost:3001/getpropertiess/${minPrice}&${maxPrice}&${aid}`).then(response => {
+        Axios.get(`https://online-rental-website.onrender.com/getpropertiess/${minPrice}&${maxPrice}&${aid}`).then(response => {
             setProperties(response.data)
-        }).then( Axios.get(`http://localhost:3001/getrentpropertiess/${minPrice}&${maxPrice}&${aid}`).then(response => setRentProperties(response.data)))
+        }).then( Axios.get(`https://online-rental-website.onrender.com/getrentpropertiess/${minPrice}&${maxPrice}&${aid}`).then(response => setRentProperties(response.data)))
     }
 
     const change = () => {

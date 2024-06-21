@@ -19,7 +19,7 @@ const Report = () => {
         if(pid <= 0){ window.alert("please enter valid property id"); setValid(false)}
         else {
             setValid(true)
-            Axios.get(`http://localhost:3001/getreport/${pid}`).then(
+            Axios.get(`https://online-rental-website.onrender.com/getreport/${pid}`).then(
                 response => setDetails(response.data)
             )
         }

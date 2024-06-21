@@ -43,7 +43,7 @@ const EditPM = () => {
     // const [aid1, setAid1] = useState(null); 
 
 useEffect(()=> {
-    Axios.get(`http://localhost:3001/details/${id}`).then(response => {
+    Axios.get(`https://online-rental-website.onrender.com/details/${id}`).then(response => {
     setPropsList(response.data)
 }).then(
     () => {
@@ -64,7 +64,7 @@ useEffect(()=> {
 
 const again = () => {
     
-        Axios.get(`http://localhost:3001/details/${id}`).then(response => {
+        Axios.get(`https://online-rental-website.onrender.com/details/${id}`).then(response => {
         setPropsList(response.data)
     }).then(
         () => {
@@ -86,7 +86,7 @@ const again = () => {
 
    
     const edit = () => {
-      Axios.post("http://localhost:3001/edittheproperty", {
+      Axios.post("https://online-rental-website.onrender.com/edittheproperty", {
         Stdt: stdt, 
         Endt: endt,
         City: city, 

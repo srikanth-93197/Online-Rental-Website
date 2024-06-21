@@ -10,13 +10,13 @@ const ViewPM = () => {
     const [properties, setProperties] = useState([]); 
     var id = localStorage.getItem("aadhar");
     useEffect (() => {
-        Axios.get(`http://localhost:3001/getallprops`).then((response) => {
+        Axios.get(`https://online-rental-website.onrender.com/getallprops`).then((response) => {
             setProperties(response.data);
         })
     }, [rel])
 
     const deleteP = (id) => {
-        Axios.post(`http://localhost:3001/deleteprop/${id}`).then(window.alert("the property is deleted")).then(rel = rel + 1)        
+        Axios.post(`https://online-rental-website.onrender.com/deleteprop/${id}`).then(window.alert("the property is deleted")).then(rel = rel + 1)        
     }
 
     const editP = (id) => {

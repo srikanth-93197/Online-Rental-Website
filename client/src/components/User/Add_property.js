@@ -26,7 +26,7 @@ const AddP = () => {
       
         while(i<10000) i = i+1; 
          
-          Axios.post("http://localhost:3001/addproperty", {
+          Axios.post("https://online-rental-website.onrender.com/addproperty", {
             Stdt: stdt, 
             Endt: endt,
             City: city, 

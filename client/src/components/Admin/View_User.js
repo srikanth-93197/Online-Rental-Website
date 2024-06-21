@@ -8,24 +8,24 @@ const ViewU = () => {
     var id =  localStorage.getItem("aadhar")
 
     useEffect(() => {
-        Axios.get(`http://localhost:3001/getusers`).then((response) => {
+        Axios.get(`https://online-rental-website.onrender.com/getusers`).then((response) => {
             setUsersList(response.data)
-        }).then(Axios.get("http://localhost:3001/getmanagers").then((resp) => {
+        }).then(Axios.get("https://online-rental-website.onrender.com/getmanagers").then((resp) => {
             setManagesList(resp.data)
         }));
     },[])
 
     
     const makeManagerU = (aid) => {
-        Axios.get(`http://localhost:3001/makemanager/${aid}`).then(window.alert(`made user with id ${aid} manager`))
+        Axios.get(`https://online-rental-website.onrender.com/makemanager/${aid}`).then(window.alert(`made user with id ${aid} manager`))
     }
 
     const removeManagerU = (aid) => {
-        Axios.get(`http://localhost:3001/makeuser/${aid}`).then(window.alert(`made manager with id ${aid} user`))
+        Axios.get(`https://online-rental-website.onrender.com/makeuser/${aid}`).then(window.alert(`made manager with id ${aid} user`))
     }
 
     const deleteU = (id) => {
-        Axios.post(`http://localhost:3001/deleteuser/${id}`).then(window.alert(`user with  id ${id} is deleted`))
+        Axios.post(`https://online-rental-website.onrender.com/deleteuser/${id}`).then(window.alert(`user with  id ${id} is deleted`))
     }
 
     return (

@@ -24,7 +24,7 @@ const AddProp = () => {
       
         
          
-          Axios.post("http://localhost:3001/addproperty", {
+          Axios.post("https://online-rental-website.onrender.com/addproperty", {
             Stdt: stdt, 
             Endt: endt,
             City: city, 

@@ -18,12 +18,12 @@ const ViewRL = () => {
      }
 
     const revokeP = (id) => {
-       Axios.get(`http://localhost:3001/revokerequest/${id}&${aid}`)
+       Axios.get(`https://online-rental-website.onrender.com/revokerequest/${id}&${aid}`)
     }
     const set = () => {
-        Axios.get(`http://localhost:3001/getpropertiesl/${locality}&${aid}`).then(response => {
+        Axios.get(`https://online-rental-website.onrender.com/getpropertiesl/${locality}&${aid}`).then(response => {
             setProperties(response.data)
-        }).then(Axios.get(`http://localhost:3001/getrentpropertiesl/${locality}&${aid}`).then(response => {
+        }).then(Axios.get(`https://online-rental-website.onrender.com/getrentpropertiesl/${locality}&${aid}`).then(response => {
             setRentProperties(response.data)
         }) )
     }

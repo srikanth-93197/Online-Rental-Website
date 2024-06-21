@@ -19,13 +19,13 @@ const ViewRC = () => {
      }
 
     const revokeP = (id) => {
-       Axios.get(`http://localhost:3001/revokerequest/${id}&${aid}`).then(set())
+       Axios.get(`https://online-rental-website.onrender.com/revokerequest/${id}&${aid}`).then(set())
     }
 
     const set = () => {
-        Axios.get(`http://localhost:3001/getproperties/${city}&${aid}`).then(response => {
+        Axios.get(`https://online-rental-website.onrender.com/getproperties/${city}&${aid}`).then(response => {
             setProperties(response.data)
-        }).then( Axios.get(`http://localhost:3001/getrentproperties/${city}&${aid}`).then(response => {
+        }).then( Axios.get(`https://online-rental-website.onrender.com/getrentproperties/${city}&${aid}`).then(response => {
             setRentProperties(response.data)
         }))
     }

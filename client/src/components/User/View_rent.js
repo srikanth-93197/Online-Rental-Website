@@ -13,9 +13,9 @@ const ViewR = () => {
 
     var aid = localStorage.getItem("aadhar");
     useEffect (() => {
-        Axios.get(`http://localhost:3001/getprops/${aid}`).then((response) => {
+        Axios.get(`https://online-rental-website.onrender.com/getprops/${aid}`).then((response) => {
             setProperties(response.data);
-        }).then(Axios.get(`http://localhost:3001/getrentprops/${aid}`).then(response => {
+        }).then(Axios.get(`https://online-rental-website.onrender.com/getrentprops/${aid}`).then(response => {
             setRentProperties(response.data)
         }))
     }, [reloaded])
@@ -25,7 +25,7 @@ const ViewR = () => {
     }
 
     const revokeP = (id) => {
-       Axios.get(`http://localhost:3001/revokerequest/${id}&${aid}`).then(setReloaded(!reloaded))
+       Axios.get(`https://online-rental-website.onrender.com/revokerequest/${id}&${aid}`).then(setReloaded(!reloaded))
     }
  
     return (

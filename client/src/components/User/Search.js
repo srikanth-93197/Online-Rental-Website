@@ -10,7 +10,7 @@ const Search = () => {
         
         else 
         {
-            Axios.get(`http://localhost:3001/enquireproperty/${pid}`).then(response => {
+            Axios.get(`https://online-rental-website.onrender.com/enquireproperty/${pid}`).then(response => {
                 if(response.data.available) window.alert("property is available")
                 else window.alert("property is occupied")
              })
